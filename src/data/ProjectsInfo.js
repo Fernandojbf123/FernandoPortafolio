@@ -43,4 +43,8 @@ const client = [
     "This Project is an appointment app for a vet. It has a form where you upload the data of the owner and the pet, also the pet’s symptoms. This app was made using React with Vite, Tailwind CSS and LocalStorage. This project is simple and useful for patient control."
   ]
 
-  export {client, subcontractor, status, techs, details};
+  const linktodemo = [
+
+  ]
+
+  export {client, subcontractor, status, techs, details, linktodemo};

@@ -10,8 +10,6 @@ import Education from './components/Education'
 import Footer from './components/Footer'
 
 
-"./images/github-logo.svg"
-
 function App() {
 
   const [modal, setModal] = useState(false)
@@ -30,6 +28,7 @@ function App() {
 
       {modal ? 
         <Modal 
+          modal   ={modal}
           setModal={setModal}/> 
         : ' ' }
       

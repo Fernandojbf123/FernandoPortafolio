@@ -1,19 +1,34 @@
+import { useEffect, useState } from "react"
+
 import ImgClose from "../images/bx-x.svg"
 import ImgGmail from "../images/gmail-logo.png"
 import ImgLinked from "../images/linkedin-logo.png"
 import ImgTikTok from "../images/tiktok-logo.png"
 import ImgGit from "../images/github-logo.svg"
 
-const Modal = ({setModal}) => {
+const Modal = ({modal,setModal}) => {
   
+
+  const [show,setShow] = useState(false)
+
   const handleModal = () => {
-    setModal(false)
+    setShow(false)
+    setTimeout ( ( ) => {
+      setModal(false)
+    },500) 
+
   }
+
+  useEffect ( () => {
+    if (modal) {
+      setShow(true)
+    }
+  },[modal])
   
   return (
     <div>
         
-        <div className="modal">
+        <div className={`modal animenubefore ${show ? 'animenuafter' : ''}`}>
 
         <img 
           src={ImgClose} 

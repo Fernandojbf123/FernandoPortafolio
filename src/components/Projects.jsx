@@ -8,7 +8,7 @@ import ImgWeb from "../images/webstyle1.png"
 import ImgBudget from "../images/Budget.png"
 import ImgCRM from "../images/CRM.png"
 import ImgVet from "../images/Vet.png"
-import {client, subcontractor, status, techs, details} from "../data/ProjectsInfo.js"
+import {client, subcontractor, status, techs, details, linktodemo} from "../data/ProjectsInfo.js"
 
 
 const Projects = () => {
@@ -31,7 +31,8 @@ const Projects = () => {
             "subcontractor":subcontractor[idx],
             "status":status[idx], 
             "techs":techs[idx], 
-            "details":details[idx]
+            "details":details[idx],
+            "linktodemo": linktodemo[idx]
         })
     }
     
@@ -69,6 +70,7 @@ const Projects = () => {
         {galModal ? 
         <GaleryModal 
             src={src}
+            galModal   = {galModal}
             setGalModal={setGalModal}
             info={info}
         /> : ''}
