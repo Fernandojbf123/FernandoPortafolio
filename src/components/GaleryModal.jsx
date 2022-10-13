@@ -22,17 +22,11 @@ const GaleryModal = ({src, galModal, setGalModal, info}) => {
       }
     },[galModal])
 
-    // md:flex md:flex-row w-full h-full
-    // flex flex-col
   return (
 
       <div className={`galery-modal anibefore ${show && 'aniafter'}`}>  
         <div className={`md:w-3/5 md:h-4/5 bg-gray-300 
                         w-full h-full overflow-auto`}>
-
-
-           
-
 
             <div className="md:flex md:flex-col">
 
@@ -49,7 +43,7 @@ const GaleryModal = ({src, galModal, setGalModal, info}) => {
                 <img 
                   src={src} 
                   alt="img" 
-                  className='aspect-square'/> 
+                  className='img-project aspect-square'/> 
                 <a href={linktodemo}
                   className='text1 text-2xl hover:text-yellow-600 cursor-pointer'
                   >Watch demo</a>  

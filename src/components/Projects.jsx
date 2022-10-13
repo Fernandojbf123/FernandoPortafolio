@@ -1,14 +1,10 @@
 import React from 'react'
 import { useState } from "react"
+
 import GaleryModal from "./GaleryModal"
 
-import ImgCondo from "../images/Condo.png"
-import ImgCrypto from "../images/Crypto.png"
-import ImgWeb from "../images/webstyle1.png"
-import ImgBudget from "../images/Budget.png"
-import ImgCRM from "../images/CRM.png"
-import ImgVet from "../images/Vet.png"
-import {client, subcontractor, status, techs, details, linktodemo} from "../data/ProjectsInfo.js"
+
+import {client, subcontractor, status, techs, details, linktodemo, imgs} from "../data/ProjectsInfo.js"
 
 
 const Projects = () => {
@@ -17,12 +13,6 @@ const Projects = () => {
     const [src, setSrc]  = useState('');
     const [info, setInfo] = useState([]);
     
-
-    const imgs = [ImgCondo,ImgCrypto,ImgWeb,ImgBudget,ImgCRM,ImgVet];
-    
-    
-
-
     const handleEnlarge = (e,idx) => {
         setSrc(e.target.src)     
         setGalModal(true)
@@ -32,7 +22,7 @@ const Projects = () => {
             "status":status[idx], 
             "techs":techs[idx], 
             "details":details[idx],
-            "linktodemo": linktodemo[idx]
+            "linktodemo": linktodemo[idx],
         })
     }
     
