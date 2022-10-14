@@ -44,10 +44,10 @@ const Modal = ({modal,setModal}) => {
             <div className="button-ppl"><a href="#contact">Contact</a></div>
 
             <div className="social-media w-full">
-                <a href=""><img src={ImgGmail} alt="gmail" id="gmail"/></a>
-                <a href=""><img src={ImgLinked} alt="linkedin" id="linkedin"/></a>
-                <a href=""><img src={ImgTikTok} alt="tiktok" id="tiktok"/></a>
-                <a href=""><img src={ImgGit} alt="github" id="github"/></a>
+                <a href="mailto:fernandojbf123@gmail.com"><img src={ImgGmail} alt="gmail" id="gmail"/></a>
+                <a href="https://www.linkedin.com/in/fernando-bello-6b5160250/"><img src={ImgLinked} alt="linkedin" id="linkedin"/></a>
+                <a href="https://www.tiktok.com/@soyfernandobello"><img src={ImgTikTok} alt="tiktok" id="tiktok"/></a>
+                <a href="https://github.com/Fernandojbf123"><img src={ImgGit} alt="github" id="github"/></a>
             </div>
         </div>
       </div>

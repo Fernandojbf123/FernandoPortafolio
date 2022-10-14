@@ -102,18 +102,24 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 0 10px
 }
 
 .social-media img{
-    width: 60px;
+    width: 45px;
     aspect-ratio: 1/1;
     cursor: pointer;
 }
 
-.social-media #github, .social-media #linkedin{
+.social-media #linkedin{
     width: 80px !important; 
     aspect-ratio: 1/1;
 }  
+
+.social-media #github{
+    width: 50px !important; 
+    aspect-ratio: 1/1;
+}
 
 #button-close{
     right:0;
@@ -179,6 +185,24 @@
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+}
+
+@media (max-width: 600px){
+    .footer{
+        height: auto;
+    }
+    .social-media{
+        margin-top: 10px;
+    }
+
+    .modal-buttons-menu{
+        padding: 20px;
+        font-size: 20px;
+        font-family: 'Bahnschrift SemiBold';
+        font-weight: 800;
+        gap: 10px;
+    }
+
 }
 
 .img-project {

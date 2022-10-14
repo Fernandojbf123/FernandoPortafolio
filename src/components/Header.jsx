@@ -1,6 +1,6 @@
 
 import ImgHam from '../images/bx-menu.svg'
-import ImgProfile from "../images/foto3.jpeg"
+import ImgProfile from "../images/foto2.png"
 
 const Header = ({setModal}) => {
 
@@ -16,8 +16,8 @@ const handleModal = (e) => {
         <nav className="primary-menu w-screen md:h-12 m-auto fixed min-12 block">
             <div className="md:w-3/5 md:mx-auto my-1 flex flex-row md:items-center md:justify-between
                             w-full">
-                <a className="md:w-full w-1/2 text2 text-3xl font-bold" href="">BELLO</a>
-                <div className="md:w-full w-1/2 md:mx-auto text1 md:text-2xl font-bold flex flex-row justify-end">
+                <a className="md:w-full w-1/3 text2 md:text-3xl text-2xl font-bold" href="">BELLO</a>
+                <div className="md:w-full w-2/3 md:mx-auto text1 md:text-2xl font-bold flex flex-row justify-end m-auto">
                     <i className='bx bxs-phone'></i>
                     (+52) 646 197 90 27
                     <img 

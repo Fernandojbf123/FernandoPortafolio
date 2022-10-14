@@ -1,4 +1,4 @@
-import ImgProfile2 from "../images/aboutme.png"
+import ImgProfile2 from "../images/aboutme2.png"
 import ImgHTML from "../images/html-logo.svg" 
 import ImgCSS from "../images/CSS-logo.svg" 
 import ImgJS from "../images/javascript-logo.svg" 
@@ -32,14 +32,14 @@ const Aboutme = () => {
                 <div className="w-full flex flex-col justify-center items-center
                                 md:w-2/6">
                     <img src={ImgProfile2} alt="aboutme" className="imgaboutme"/>
-                    <h1 className="text1 md:text-3xl text-2xl text-underline">1 year of experience</h1>
+                    <h1 className="text1 md:text-3xl text-2xl text-underline">1.5 years of experience</h1>
 
                 </div>
                 
                 <div className="mt-10 w-full flex flex-col justify-center items-center
                                 md:w-3/6 md:items-start">
                     <h1 className="md:text-4xl text-2xl font-bold text-gray-600 md:text-left text-center">Hi, I'm <span className="text-underline">Fernando Bello</span></h1>
-                    <p className="md:text-2xl font-bold text-gray-600 mt-5 w-4/5">I'm a web developer with great experience in HTML, CSS and JavaScript. I'm looking to build up a career in Front end Development.</p>
+                    <p className="md:text-2xl font-bold text-gray-600 mt-5 w-4/5">I'm a web developer with great experience <span className="text-underline">REACT</span>, HTML, CSS and JAVASCRIPT. I'm looking to build up a career in Front end Development.</p>
                     <h2 className="mt-5 font-bold md:text-3xl text-2xl">Skills</h2>
                     
                     <div className="w-4/5">
