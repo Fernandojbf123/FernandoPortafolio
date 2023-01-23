@@ -16,7 +16,7 @@ const FAQ = () => {
     A[0]="I have 2 years of experience as Front end dev but I've been coding since my childhood using several coding lenguages such as Turbo Pascal, C++, php, Fortran, Matlab."
     A[1]="I'm always learning. Coding languages and frameworks are always evolving, so I invest a lot of time and money in studies to keep the pace of the changes. Most latelly I'm learning about ChatGPT."
     A[2]="Yes. My family and I are ready to move if it is needed."
-    A[3]="I've worked in several projects mostly in 'solo mode' since 2012. I've coded big projects working with data from NASA and ESA Satellites to detect eddies in the Gulf of Mexico, as well using High frecuency radars to detect shipwrecks or Sargazum in the Gulf of Mexico coast. In those projects I used the NASA's databases, created the University databases, coded the functions and all the algorithms for eddies detections and implemented functions from other researchers to improve the code. Since 2020 I decided to move onto web development and I've been working as freelancer making web applications and web pages."
+    A[3]="I've worked in several projects mostly in 'solo mode' since 2012. I've coded big projects working with data from NASA and ESA Satellites to detect eddies in the Gulf of Mexico, as well using High frecuency radars to detect shipwrecks or Sargazum in the Gulf of Mexico coast (coded in Matlab). In those projects I used the NASA's databases, created the University databases, coded the functions and all the algorithms for eddies detections and implemented functions from other researchers to improve the code. Since 2021 I decided to move onto web development and I've been working as freelancer making web applications and web pages."
 
     const [question, setQuestion] = useState(Q[0]);
     const [answer, setAnswer] = useState(A[0]);
@@ -30,7 +30,7 @@ const FAQ = () => {
         setQuestion(Q[idx])
         setAnswer(A[idx])
         
-        if (idx > Q.length-1){
+        if (idx >= Q.length-1){
             setIdx(0);
         }
         else {
@@ -40,7 +40,7 @@ const FAQ = () => {
     
     return () => clearInterval(interval)
 
-  },[Q])
+  },[idx])
 
   function changeManualLeft () {
     let idxtmp = idx;
