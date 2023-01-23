@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ImgClose from "../images/bx-x.svg"
+import ProjectGalery from './ProjectGalery';
 
 
 
-const GaleryModal = ({src, galModal, setGalModal, info}) => {
+const ProjectsModal = ({src, galModal, setGalModal, info}) => {
 
   const [show,setShow] = useState(false)  
   
-  const {client, subcontractor, status, techs, details, linktodemo} = info;
+  const {projectName, techs, details, linktodemo} = info;
     const handleModal = () => {
       setShow(false)
       setTimeout ( () => {
@@ -39,32 +40,14 @@ const GaleryModal = ({src, galModal, setGalModal, info}) => {
                   onClick={handleModal}/>
               </div>
               
-              <div className='w-full flex flex-col justify-center items-center'>
-                <img 
-                  src={src} 
-                  alt="img" 
-                  className='img-project aspect-square'/> 
-                <a href={linktodemo}
-                  className='text1 text-2xl hover:text-yellow-600 cursor-pointer'
-                  >Watch demo</a>  
-              </div>
-
               <div className="md:w-full md:h-4/5 mt-5 md:px-10 px-3 
                               w-full h-full">
 
                 <table className='w-full'>
                   <tbody>
                     <tr>
-                      <td className="md:w-1/4 text2 md:text-2xl text-xs">Client:{' '}</td>
-                      <td className="px-2 md:w-3/4 text1 md:text-1xl text-xs">{client}</td>
-                    </tr>
-                    <tr>
-                      <td className="md:w-1/4 text2 md:text-2xl text-xs">Subcontractor:{' '}</td>
-                      <td className="px-2 md:w-3/4 text1 md:text-1xl text-xs">{subcontractor}</td>
-                    </tr>
-                    <tr>
-                      <td className="md:w-1/4 text2 md:text-2xl text-xs">Status:{' '}</td>
-                      <td className="px-2 md:w-3/4 text1 md:text-1xl text-xs">{status}</td>
+                      <td className="md:w-1/4 text2 md:text-2xl text-xs">Name:{' '}</td>
+                      <td className="px-2 md:w-3/4 text1 md:text-1xl text-xs">{projectName}</td>
                     </tr>
                     <tr>
                       <td className="md:w-1/4 text2 md:text-2xl text-xs">Techs:{' '}</td>
@@ -74,15 +57,28 @@ const GaleryModal = ({src, galModal, setGalModal, info}) => {
                       <td className="md:w-1/4 text2 md:text-2xl text-xs align-top">Details:{' '}</td>
                       <td className="px-2 md:w-3/4 text1 md:text-1xl text-xs">{details}</td>
                     </tr>
+                    <tr>
+                      <td className="md:w-1/4 text2 md:text-2xl text-xs align-top">Demo:{' '}</td>
+                      <td className="px-2 md:w-3/4 text1 md:text-1xl text-xs">
+                        <a href={linktodemo}
+                          className='text1 text-2xl hover:text-yellow-600 cursor-pointer'
+                          >Watch demo</a> 
+                      </td>
+                    </tr>
+                    
                   </tbody>
                 </table>
-         
-  
               </div> 
+
+              <div className='mt-5 w-full flex flex-col justify-center items-center'>
+                <ProjectGalery 
+                  src={src}/>
+              </div>
+
             </div>  
         </div>
       </div>
   )
 }
 
-export default GaleryModal
+export default ProjectsModal

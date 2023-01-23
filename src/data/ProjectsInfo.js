@@ -1,34 +1,14 @@
-const client = [
-    "GeoMaya",
-    "Personal",
-    "GeoMaya, Dr. Acevedo, Mi Casa Mi Terreno",
-    "Personal",
-    "Personal",
-    "Personal",
-    "Personal",
-    "Personal"
-  ]
-
-  const subcontractor = [
-    "FincaMex",
-    "Personal",
-    "N/A",
-    "Personal",
-    "Personal",
-    "Personal",
-    "Personal",
-    "Personal"
-  ]
-
-  const status = [
-    "Currently on going",
-    "2022",
-    "2021-2022",
-    "2022",
-    "2022",
-    "2022",
-    "2022",
-    "2021"
+  const projectName = [
+    "Condo Manager",
+    "Crypto Quoter",
+    "Web design",
+    "Budget App",
+    "Clients Manager",
+    "Vet's Appointment",
+    "Memorama",
+    "To do list",
+    "Guitar LA",
+    "Random Projects",
   ]
 
   const techs = [
@@ -39,7 +19,9 @@ const client = [
     "HTML, CSS, JS, Vite, React, Tailwind CSS, JSON Server, Hooks, React-Router-DOM, , States, Props",
     "HTML, CSS, JS, Vite, React, States, Props",
     "HTML, CSS, JS",
-    "HTML, CSS, JS"
+    "HTML, CSS, JS",
+    "Remix-run,CSS,TailwindCSS, Strapi, PostgreSQL, Cloudinary",
+    "HTML, CSS, JS, React, HighCharts, etc",
     ]
 
   const details = [
@@ -50,7 +32,9 @@ const client = [
     "This app stores and displays data of clients. This app was made using React with Vite, Tailwind CSS and it uses JSON server as database. It was built using react-router-dom (Outlet, Link, useLocation, useParams), hooks (useState, useEffect) and a Spinner effect when waiting for DB connection.",
     "This Project is an appointment app for a vet. It has a form where you upload the data of the owner and the pet, also the pet’s symptoms. This app was made using React with Vite, Tailwind CSS and LocalStorage. This project is simple and useful for patient control.",
     "Improve your memory by playing some 'MEMORAMA'. This app was made using HTML, CSS and JS. It uses all the basis of DOM manipulation and Event Handlers. It includes a timer and a score system.",
-    "A simple but useful app to remind you your pending task."
+    "A simple but useful app to remind you your pending task.",
+    "GuitarLA is a webstore",
+    "These are some random projects where I tested: 1- Animations: dinno runner and beating hearth. 2- API connections: Starwars characters listing. 3- Data analysis: Charts."
   ]
 
   const linktodemo = [
@@ -61,7 +45,9 @@ const client = [
     "https://effulgent-puffpuff-0708f4.netlify.app",
     "https://prismatic-sawine-066f99.netlify.app/",   
     "https://inquisitive-mermaid-359825.netlify.app",
-    "https://coruscating-cajeta-1bb9f9.netlify.app/"
+    "https://coruscating-cajeta-1bb9f9.netlify.app/",
+    "",
+    "",
   ]
 
 import ImgCondo from "../images/Condo.png"
@@ -72,7 +58,10 @@ import ImgCRM from "../images/CRM.png"
 import ImgVet from "../images/Vet.png"
 import ImgMemo from "../images/Memory.png"
 import ImgTodo from "../images/Todoapp.png"
+import ImgGuitarLA from "../images/GuitarLA.png"
+import ImgRandomProjects from "../images/RandomProjects.png"
 
-const imgs = [ImgCondo,ImgCrypto,ImgWeb,ImgBudget,ImgCRM,ImgVet,ImgMemo,ImgTodo];
 
-export {client, subcontractor, status, techs, details, linktodemo, imgs};
+const imgs = [ImgCondo,ImgCrypto,ImgWeb,ImgBudget,ImgCRM,ImgVet,ImgMemo,ImgTodo,ImgGuitarLA, ImgRandomProjects];
+
+export {projectName, techs, details, linktodemo, imgs };

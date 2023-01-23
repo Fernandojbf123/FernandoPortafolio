@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from "react"
 
-import GaleryModal from "./GaleryModal"
+import ProjectsModal from "./ProjectsModal"
 
 
-import {client, subcontractor, status, techs, details, linktodemo, imgs} from "../data/ProjectsInfo.js"
+import { projectName, techs, details, linktodemo, imgs } from "../data/ProjectsInfo.js"
 
 
 const Projects = () => {
@@ -14,16 +14,15 @@ const Projects = () => {
     const [info, setInfo] = useState([]);
     
     const handleEnlarge = (e,idx) => {
-        setSrc(e.target.src)     
+        setSrc(`/src/images/p${idx}/`)     
         setGalModal(true)
         setInfo({
-            "client":client[idx], 
-            "subcontractor":subcontractor[idx],
-            "status":status[idx], 
+            "projectName": projectName[idx],
             "techs":techs[idx], 
             "details":details[idx],
             "linktodemo": linktodemo[idx],
         })
+        
     }
     
 
@@ -40,6 +39,7 @@ const Projects = () => {
                             md:flex-row flex-wrap md:justify-evenly">
                 {imgs.map( ( iimg, idx ) => (
                     <div key={idx} className="flex items-center justify-center">
+                                    
                         <img 
                             className="img-project cursor-pointer" 
                             src={iimg} 
@@ -47,6 +47,7 @@ const Projects = () => {
                             onClick={ (e) => {handleEnlarge(e,idx)}}/>
 
                         <p className="absolute text1 text-white">Click me for details</p>
+                         
                     </div>
                 ))}
             
@@ -54,11 +55,8 @@ const Projects = () => {
 
             </div>
 
-            
-  
-
         {galModal ? 
-        <GaleryModal 
+        <ProjectsModal 
             src={src}
             galModal   = {galModal}
             setGalModal={setGalModal}
